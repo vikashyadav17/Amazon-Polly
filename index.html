@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Polly Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Amazon Polly Tools</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#features" class="hover:underline">Features</a></li>
+                    <li><a href="#demo" class="hover:underline">Demo</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 px-4">
+        <!-- Introduction Section -->
+        <section class="text-center">
+            <h2 class="text-3xl font-semibold mb-4">What is Amazon Polly?</h2>
+            <p class="text-gray-700">Amazon Polly is a cloud service that converts text into lifelike speech, enabling developers to create applications that talk. Use the tools below to interact with Amazon Polly's features.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Features</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <li class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold text-lg">Text-to-Speech Conversion</h3>
+                    <p class="text-gray-600 mt-2">Quickly convert written content into lifelike speech.</p>
+                </li>
+                <li class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold text-lg">Multiple Languages</h3>
+                    <p class="text-gray-600 mt-2">Supports a variety of languages and accents.</p>
+                </li>
+                <li class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold text-lg">Custom Lexicons</h3>
+                    <p class="text-gray-600 mt-2">Define how specific words are pronounced.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Try It Out</h2>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <label for="textInput" class="block text-gray-700 font-medium">Enter Text:</label>
+                <textarea id="textInput" class="w-full border-gray-300 rounded-lg mt-2 p-2" rows="4"></textarea>
+
+                <label for="voiceSelect" class="block text-gray-700 font-medium mt-4">Select Voice:</label>
+                <select id="voiceSelect" class="w-full border-gray-300 rounded-lg mt-2 p-2">
+                    <option value="">Select a voice</option>
+                    <option value="Joanna">Joanna (English - US)</option>
+                    <option value="Matthew">Matthew (English - US)</option>
+                </select>
+
+                <button id="playButton" class="bg-blue-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-blue-700">Play</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+            <form class="bg-white shadow-md rounded-lg p-6">
+                <label for="name" class="block text-gray-700 font-medium">Your Name:</label>
+                <input id="name" type="text" class="w-full border-gray-300 rounded-lg mt-2 p-2" />
+
+                <label for="email" class="block text-gray-700 font-medium mt-4">Your Email:</label>
+                <input id="email" type="email" class="w-full border-gray-300 rounded-lg mt-2 p-2" />
+
+                <label for="message" class="block text-gray-700 font-medium mt-4">Message:</label>
+                <textarea id="message" class="w-full border-gray-300 rounded-lg mt-2 p-2" rows="4"></textarea>
+
+                <button class="bg-blue-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-blue-700">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Amazon Polly Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', () => {
+            const textInput = document.getElementById('textInput').value;
+            const voice = document.getElementById('voiceSelect').value;
+
+            if (!textInput || !voice) {
+                alert('Please enter text and select a voice.');
+                return;
+            }
+
+            // Replace with Amazon Polly SDK integration
+            alert(`Playing the text: "${textInput}" using voice: ${voice}`);
+        });
+    </script>
+</body>
+
+</html>
+
+
